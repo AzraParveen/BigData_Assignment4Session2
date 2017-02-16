@@ -1,0 +1,38 @@
+Hadoop in Layman's term:
+
+HADOOP COMPONENT---> HDFS(Storage)
+               |
+               ----> MAP REDUCE (Processing) --->Hive
+                                            \--->Pig
+HDFS>
+HDFS takes care of storage part of Hadoop applications. MapReduce applications consume data 
+from HDFS. HDFS creates multiple replicas of data blocks and distributes them on compute nodes
+in cluster. This distribution enables reliable and extremely rapid computations.
+               
+MAP REDUCE>
+MapReduce is a computational model and software framework for writing applications which are 
+run on Hadoop. These MapReduce programs are capable of processing enormous data in parallel on
+large clusters of computation nodes.
+
+|> Hive - is data warehousing software that addresses how data is structured and queried in 
+distributed Hadoop clusters. Hive is also a popular development environment that is used to 
+write queries for data in the Hadoop environment. It provides tools for ETL operations and 
+brings some SQL-like capabilities to the environment. Hive is a declarative language that is
+used to develop applications for the Hadoop environment, however it does not support real-time 
+queries.
+Hive also allows MapReduce-compatible mapping and reduction software to perform more sophisticated
+functions. However, Hive does not allow row-level updates or support for real-time queries, and it
+is not intended for OLTP workloads. Many consider Hive to be much more effective for processing 
+structured data than unstructured data, for which Pig is considered advantageous.
+
+|> Pig - is a procedural language for developing parallel processing applications for large data sets 
+in the Hadoop environment. Pig is an alternative to Java programming for MapReduce, and automatically
+generates MapReduce functions. Pig includes Pig Latin, which is a scripting language. Pig translates
+Pig Latin scripts into MapReduce, which can then run on YARN and process data in the HDFS cluster. 
+Pig is popular because it automates some of the complexity in MapReduce development.
+Pig is commonly used for complex use cases that require multiple data operations. It is more of a 
+processing language than a query language. Pig helps develop applications that aggregate and sort
+data and supports multiple inputs and exports. It is highly customizable, because users can write
+their own functions using their preferred scripting language. Ruby, Python and even Java are all 
+supported. Thus, Pig has been a popular option for developers that are familiar with those languages 
+but not with MapReduce. However, SQL developers may find Hive easier to learn.
